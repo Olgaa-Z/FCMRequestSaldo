@@ -12,6 +12,8 @@ object NetworkModule {
     const val FIREBASE_URL = "https://fcm.googleapis.com/"
 
     private fun getOkHttp(): OkHttpClient {
+
+        //logging -> to record, logcat, biar kita tau catatan error lebih spesifik
         val logging = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC)
             .setLevel(HttpLoggingInterceptor.Level.BODY)
         return OkHttpClient.Builder()

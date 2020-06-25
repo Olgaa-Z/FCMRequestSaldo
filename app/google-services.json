@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "364865057740",
+    "firebase_url": "https://wisataproject-83653.firebaseio.com",
+    "project_id": "wisataproject-83653",
+    "storage_bucket": "wisataproject-83653.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364865057740:android:7c62c178caaae935192369",
+        "android_client_info": {
+          "package_name": "com.lauwba.wisataproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364865057740-so8its0ba7ov6vff45gcec46llbqs8fv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lauwba.wisataproject",
+            "certificate_hash": "a812dc1a36f6b565b15574d77e2210a8fda60991"
+          }
+        },
+        {
+          "client_id": "364865057740-8sq0equr388chkhvvsge2rd8vud1guc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lauwba.wisataproject",
+            "certificate_hash": "2170c0c39b65f023126e23dd1cd46a3e32710e12"
+          }
+        },
+        {
+          "client_id": "364865057740-bdmssf22anlmqbu0999j28b84jcb8vst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVOTlmymIzooqIK3f3Fiwb5kIa__g1OpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364865057740-bdmssf22anlmqbu0999j28b84jcb8vst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364865057740:android:2b9c9e5118cc114e192369",
+        "android_client_info": {
+          "package_name": "com.surelabs.request.saldo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364865057740-eptoqtf64phsuepts17n8msdj2ikb9lt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.surelabs.request.saldo",
+            "certificate_hash": "ca155311faae5becd9939ebf46181fe8a2013229"
+          }
+        },
+        {
+          "client_id": "364865057740-bdmssf22anlmqbu0999j28b84jcb8vst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVOTlmymIzooqIK3f3Fiwb5kIa__g1OpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364865057740-bdmssf22anlmqbu0999j28b84jcb8vst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
