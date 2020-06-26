@@ -1,4 +1,4 @@
-package com.surelabs.request.saldo.service
+package com.surelabs.request.saldo.user.service
 
 import android.widget.Toast
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -14,7 +14,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         if(p0?.notification != null){
             //berarti yg dikirimkan type notification
             val body = p0.notification?.body
-            Toast.makeText(this, body, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, body, Toast.LENGTH_SHORT).show()
         }else{
             // berarti yg dikirimkan berupa data payload
         }

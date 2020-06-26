@@ -16,8 +16,9 @@ interface ApiService{
     )
 
     //post pasti selalu ada formurlencoded, jadi both selalu ada
-    @FormUrlEncoded
-    @POST()
+//    @FormUrlEncoded
+    //kalau pake @Body, ditambhakn @FormUrlEncoded, tapi kalau @Body-> @Field : baru pakai @FormUrlEncoded
+    @POST("fcm/send")
     fun sendFcmData(@Body fcmModel: FCMModel): retrofit2.Call<ResponseBody>
 
 

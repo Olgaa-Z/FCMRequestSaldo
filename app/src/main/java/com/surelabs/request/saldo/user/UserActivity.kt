@@ -16,6 +16,11 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
 import java.util.concurrent.ThreadLocalRandom
+import androidx.core.app.ComponentActivity.ExtraData
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import androidx.core.content.ContextCompat.getSystemService
+import java.text.DecimalFormat
+
 
 class UserActivity : AppCompatActivity() {
 
@@ -25,7 +30,7 @@ class UserActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user)
+        setContentView(com.surelabs.request.saldo.R.layout.activity_user)
 
         jumlahSaldo.setDecimals(false)
         jumlahSaldo.setCurrency(CurrencySymbols.INDONESIA)
@@ -35,7 +40,7 @@ class UserActivity : AppCompatActivity() {
         btnKirimRequest.setOnClickListener {
             when {
                 jumlahSaldo.text?.isEmpty()== true -> Toast.makeText(this@UserActivity, "Harus Diisi", Toast.LENGTH_SHORT).show()
-                jumlahSaldo.text.toString().toInt() < 25000 -> Toast.makeText(this@UserActivity, "Nominal request minimal adalah Rp. 25.000", Toast.LENGTH_SHORT).show()
+                jumlahSaldo.cleanIntValue < 25000 -> Toast.makeText(this@UserActivity, "Nominal request minimal adalah Rp. 25.000", Toast.LENGTH_SHORT).show()
                 else -> requestSaldo()
             }
         }
@@ -52,11 +57,15 @@ class UserActivity : AppCompatActivity() {
     private fun requestSaldo() {
         val random = ThreadLocalRandom.current().nextInt(100,999)
 //        val totalRequest = jumlahSaldo.text.toString().toInt().plus(random) error awalnya karna semua karakter include Rp,., diambil juga
+//        val totalRequest = jumlahSaldo.cleanIntValue.plus(random) --> ini dipindahin ke format currency kotlin yang dibawah
+
+        val formatter = DecimalFormat("#,###")
         val totalRequest = jumlahSaldo.cleanIntValue.plus(random)
+        val formattedNumber = formatter.format(totalRequest)
 
         //Build the notifications
         val notificationItem = NotificationItem()
-        notificationItem.body = "User meminta pengisian saldo sebesar $totalRequest"
+        notificationItem.body = "User meminta pengisian saldo sebesar $formattedNumber"
         notificationItem.title = "Permintaan Pengisian Saldo"
 
         //Build the FCM Request Model

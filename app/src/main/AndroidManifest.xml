@@ -10,12 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".service.MyFirebaseMessagingService"
+            android:name=".admin.service.MyFirebaseMessagingServiceAdmin"
+            android:exported="false">
+
+        </service>
+
+        <activity android:name=".admin.AdminActivity">
+
+        </activity>
+
+        <service
+            android:name=".user.service.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <activity android:name=".user.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
